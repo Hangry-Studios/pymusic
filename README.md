@@ -1,3 +1,6 @@
+> [!NOTE]
+> This library was vibecoded by [Claude](https://claude.ai) (Anthropic). Use with healthy skepticism.
+
 # 🎵 pymusic
 
 **Make music with Python code.** Define notes, chords, scales, and tracks — then export to WAV or MIDI. No dependencies, pure Python 3.9+.
@@ -21,7 +24,7 @@ export_midi(song, "hello.mid")
 ## Installation
 
 ```bash
-# pip install pymusic           # once (or if) published to PyPI, currently not working
+~~pip install pymusic~~           # once published to PyPI
 # or install directly from source:
 git clone https://github.com/Hangry-Studios/pymusic
 cd pymusic
