@@ -21,7 +21,7 @@ export_midi(song, "hello.mid")
 ## Installation
 
 ```bash
-~~pip install pymusic~~           # once published to PyPI
+# pip install pymusic           # once (or if) published to PyPI, currently not working
 # or install directly from source:
 git clone https://github.com/Hangry-Studios/pymusic
 cd pymusic
