@@ -1,20 +1,14 @@
-"""
-examples/twinkle.py
--------------------
-Renders "Twinkle Twinkle Little Star" to both WAV and MIDI.
-"""
-
-from pymusic import Note, REST, Track, Song, Synth, export_wav, export_midi, play
+from pymusic import Note, Track, Song, export_wav, export_midi
+from pymusic.play import play
 from pymusic.rhythm import quarter, half
 
-# --- Build the melody track ---
-melody = Track("Melody", instrument=0)   # Acoustic Grand Piano
+melody = Track("Melody", instrument=0)
 
 notes = [
     Note("C4"), Note("C4"), Note("G4"), Note("G4"),
-    Note("A4"), Note("A4"), Note("G4"),              # "Twinkle twinkle little star"
+    Note("A4"), Note("A4"), Note("G4"),
     Note("F4"), Note("F4"), Note("E4"), Note("E4"),
-    Note("D4"), Note("D4"), Note("C4"),              # "How I wonder what you are"
+    Note("D4"), Note("D4"), Note("C4"),
 ]
 durations = [
     quarter, quarter, quarter, quarter,
@@ -26,17 +20,13 @@ durations = [
 for note, dur in zip(notes, durations):
     melody.add(note.with_duration(dur))
 
-# --- Assemble song ---
 song = Song("Twinkle Twinkle", bpm=100)
 song.add_track(melody)
 
 print(song)
-
-# --- Export ---
 export_wav(song, "twinkle.wav")
 export_midi(song, "twinkle.mid")
 print("Saved twinkle.wav and twinkle.mid")
-play(song)
 
-print('Playing...')
+print("Playing...")
 play(song)
