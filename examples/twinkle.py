@@ -4,7 +4,7 @@ examples/twinkle.py
 Renders "Twinkle Twinkle Little Star" to both WAV and MIDI.
 """
 
-from pymusic import Note, REST, Track, Song, Synth, export_wav, export_midi
+from pymusic import Note, REST, Track, Song, Synth, export_wav, export_midi, play
 from pymusic.rhythm import quarter, half
 
 # --- Build the melody track ---
@@ -36,3 +36,7 @@ print(song)
 export_wav(song, "twinkle.wav")
 export_midi(song, "twinkle.mid")
 print("Saved twinkle.wav and twinkle.mid")
+play(song)
+
+print('Playing...')
+play(song)
